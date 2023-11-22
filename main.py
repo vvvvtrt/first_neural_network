@@ -17,6 +17,8 @@ def tests(training_set_inputs, training_set_outputs, test_):
 
 
 if __name__ == '__main__':
+    num_ = 6
+
     inputs = list(num.values())
     training_set_inputs = [[] for i in range(len(inputs[0][0]))]
     training_set_outputs = [[]]
@@ -26,10 +28,18 @@ if __name__ == '__main__':
             for k in range(len(inputs[i][j])):
                 training_set_inputs[k].append(inputs[i][j][k])
 
-            training_set_outputs[0].append(1 if i == 0 else 0)
+            training_set_outputs[0].append(1 if i == num_ else 0)
 
     training_set_outputs = array(training_set_outputs)
 
+    print(tests(training_set_inputs, training_set_outputs, test0))
     print(tests(training_set_inputs, training_set_outputs, test1))
     print(tests(training_set_inputs, training_set_outputs, test2))
+    print(tests(training_set_inputs, training_set_outputs, test3))
+    print(tests(training_set_inputs, training_set_outputs, test4))
+    print(tests(training_set_inputs, training_set_outputs, test5))
+    print(tests(training_set_inputs, training_set_outputs, test6))
+    print(tests(training_set_inputs, training_set_outputs, test7))
+    print(tests(training_set_inputs, training_set_outputs, test8))
+    print(tests(training_set_inputs, training_set_outputs, test9))
 
